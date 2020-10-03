@@ -3,6 +3,7 @@ const generateSubCatalog = () => {
     subCatalog.classList.add('subcatalog');
 
     const updateHTML = (header, list) => {
+        subCatalog.textContent = '';
         let listHTML = '';
 
         list.forEach((item => {
@@ -21,17 +22,7 @@ const generateSubCatalog = () => {
             </button>
             <h3 class="subcatalog-header"><a href="goods.html?cat=${header}">${header}</a></h3>
             <ul class="subcatalog-list">
-                <li class="subcatalog-list__item"><a href="goods.html?subcat=Диваны">Диваны</a></li>
-                <li class="subcatalog-list__item"><a href="goods.html?subcat=Кресла">Кресла</a></li>
-                <li class="subcatalog-list__item"><a href="goods.html?subcat=Книжные шкафы">Книжные шкафы</a></li>
-                <li class="subcatalog-list__item"><a href="goods.html?subcat=Стеллажи">Стеллажи</a></li>
-                <li class="subcatalog-list__item"><a href="goods.html?subcat=Шкаф для ТВ">Шкаф для ТВ</a></li>
-                <li class="subcatalog-list__item"><a href="goods.html?subcat=Кровати">Кровати</a></li>
-                <li class="subcatalog-list__item"><a href="goods.html?subcat=Комоды">Комоды</a></li>
-                <li class="subcatalog-list__item"><a href="goods.html?subcat=Столы">Столы</a></li>
-                <li class="subcatalog-list__item"><a href="goods.html?subcat=Письменные столы">Письменные столы</a></li>
-                <li class="subcatalog-list__item">
-                    <a href="goods.html?subcat=Стулья для письменного стола">Стулья для письменного стола</a></li>
+                ${listHTML}
             </ul>
     `;
         subCatalog.insertAdjacentHTML('afterbegin', subCatalogHTML);

@@ -54,7 +54,10 @@ export const useCatalog = () => {
     closeButton.addEventListener('click', closeMenu);
     overlay.addEventListener('click', closeMenu);
     catalog.addEventListener('click', openSubMenu);
-    subCatalogCloseBtn.addEventListener('click', closeSubMenu);
+    subCatalog.addEventListener('click', (event) => {
+        const btnReturn = event.target.closest('.btn-return');
+        if (btnReturn) closeSubMenu();
+    });
     document.addEventListener('keydown', e => {
         if (e.code === 'Escape') {
             closeMenu();
