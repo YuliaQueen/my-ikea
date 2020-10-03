@@ -7,7 +7,7 @@ const PARAM = {
         'category',
         'subcategory'
     ]
-}
+};
 
 export const getData = {
     url: 'database/dataBase.json',
