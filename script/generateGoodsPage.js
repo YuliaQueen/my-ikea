@@ -14,7 +14,7 @@ const generateGoodsPage = () => {
         data.forEach(item => {
             goodsList.insertAdjacentHTML('afterbegin', `
             <li class="goods-list__item">
-				<a class="goods-item__link" href="card.html#idd001">
+				<a class="goods-item__link" href="card.html#${item.id}">
 					<article class="goods-item">
 						<div class="goods-item__img">
 							<img src=${item.img[0]}
@@ -35,7 +35,7 @@ const generateGoodsPage = () => {
             `);
         });
     };
-    
+
     if (location.pathname.includes('goods') && location.search) {
         const search = decodeURI(location.search);
         const prop = search.split('=')[0].slice(1);
